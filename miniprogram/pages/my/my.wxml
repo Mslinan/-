@@ -1,0 +1,34 @@
+<view class="avtar">
+  <view class="bg">
+    <image src="../../images/background.jpg" mode="aspectFill"/>
+  </view>
+  <view class="user">
+    <image src="../../images/user.png" mode="widthFix"/>
+    <button open-type="getUserInfo" type="primary">
+      登录
+    </button>
+  </view>
+</view>
+
+
+<!-- tab -->
+<view class="tabs">
+  <view class="item {{current === 0 ? 'active' : ''}}" bindtap="chectoutTab" data-index="0">菜单</view>
+  <view class="item {{current === 1 ? 'active' : ''}}" bindtap="chectoutTab" data-index="1">菜谱</view>
+  <view class="item {{current === 2 ? 'active' : ''}}" bindtap="chectoutTab" data-index="2">关注</view>
+</view>
+
+<swiper current-item-id="{{current}}" bindchange="handelChange">
+  <swiper-item item-id="0">111</swiper-item>
+  <swiper-item item-id="1">222</swiper-item>
+  <swiper-item item-id="2">333</swiper-item>
+</swiper>
+  
+
+<!-- <view class="content">
+  <image src="../../images/meiyouxiangguan.png" />
+  <view class="text">
+    请先登录哦~
+  </view>
+</view> -->
+

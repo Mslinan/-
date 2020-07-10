@@ -1,0 +1,44 @@
+.avtar {
+  position: relative;
+}
+.avtar .bg {
+  height: 45vh;
+  overflow: hidden;
+}
+.avtar .bg image {
+  width: 100%;
+}
+.avtar .user {
+  position: absolute;
+  left: 50%;
+  top: 30rpx;
+  transform: translateX(-50%);
+}
+.avtar .user image {
+  width: 100%;
+}
+.avtar .user button {
+  width: 200rpx;
+}
+.tabs {
+  display: flex;
+  font-size: 34rpx;
+}
+.tabs .item {
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1rpx solid #ccc;
+  padding-bottom: 20rpx;
+}
+.tabs .item.active {
+  border-bottom: 1rpx solid #fe6f36;
+  color: #fe6f36;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

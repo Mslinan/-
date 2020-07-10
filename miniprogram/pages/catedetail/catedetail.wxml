@@ -1,0 +1,90 @@
+<view class="detail_list">
+  <view class="item">
+    <view class="left">
+      <image src="../../images/1.jpg" mode="aspectFill"></image>
+    </view>
+    <view class="right">
+      <view class="title">土豆地瓜</view>
+      <view class="info">
+        <view class="avatar">
+          <image src="../../images/1.jpg" mode="aspectFill"/>
+          anana
+        </view>
+        <view class="collect">
+          <image src="../../icons/shoucang.png" mode="widthFix"/>
+          1
+        </view>
+        <view class="see">
+          <image src="../../icons/chakan.png" mode="widthFix"/>
+          6
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="item">
+    <view class="left">
+      <image src="../../images/1.jpg" mode="aspectFill"></image>
+    </view>
+    <view class="right">
+      <view class="title">土豆地瓜</view>
+      <view class="info">
+        <view class="avatar">
+          <image src="../../images/1.jpg" mode="aspectFill"/>
+          anana
+        </view>
+        <view class="collect">
+          <image src="../../icons/shoucang.png" mode="widthFix"/>
+          1
+        </view>
+        <view class="see">
+          <image src="../../icons/chakan.png" mode="widthFix"/>
+          6
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="item">
+    <view class="left">
+      <image src="../../images/1.jpg" mode="aspectFill"></image>
+    </view>
+    <view class="right">
+      <view class="title">土豆地瓜</view>
+      <view class="info">
+        <view class="avatar">
+          <image src="../../images/1.jpg" mode="aspectFill"/>
+          anana
+        </view>
+        <view class="collect">
+          <image src="../../icons/shoucang.png" mode="widthFix"/>
+          1
+        </view>
+        <view class="see">
+          <image src="../../icons/chakan.png" mode="widthFix"/>
+          6
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="item">
+    <view class="left">
+      <image src="../../images/1.jpg" mode="aspectFill"></image>
+    </view>
+    <view class="right">
+      <view class="title">土豆地瓜</view>
+      <view class="info">
+        <view class="avatar">
+          <image src="../../images/1.jpg" mode="aspectFill"/>
+          anana
+        </view>
+        <view class="collect">
+          <image src="../../icons/shoucang.png" mode="widthFix"/>
+          1
+        </view>
+        <view class="see">
+          <image src="../../icons/chakan.png" mode="widthFix"/>
+          6
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

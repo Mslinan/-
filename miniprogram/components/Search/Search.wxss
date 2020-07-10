@@ -1,0 +1,43 @@
+.search {
+  position: relative;
+}
+.search .bg {
+  height: 400rpx;
+}
+.search .bg image {
+  width: 100%;
+  height: 100%;
+}
+.search .input_wapper {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 70rpx;
+  background-color: #fff;
+  width: 80%;
+  border-radius: 20rpx;
+}
+.search .input_wapper icon {
+  flex: 1;
+  padding: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search .input_wapper input {
+  height: 100%;
+  flex: 10;
+}
+.search .input_wapper button {
+  background-color: #9f0b00;
+  flex: 2;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}

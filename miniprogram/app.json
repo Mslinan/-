@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/my/my",
+    "pages/cate/cate",
+    "pages/catedetail/catedetail",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fe6f36",
+    "navigationBarTitleText": "南瓜菜谱",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#fe6f36",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./icons/index.png",
+        "selectedIconPath": "./icons/index-active.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "./icons/search.png",
+        "selectedIconPath": "./icons/search-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./icons/personal.png",
+        "selectedIconPath": "./icons/personal-active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

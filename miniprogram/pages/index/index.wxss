@@ -1,0 +1,102 @@
+page {
+  background-color: #f1f1f1;
+}
+.catenav {
+  display: flex;
+  border-bottom: 1rpx solid #ddd;
+}
+.catenav .item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30rpx;
+  font-size: 30rpx;
+}
+.catenav .item image {
+  width: 70%;
+  margin-bottom: 20rpx;
+}
+.hot {
+  display: flex;
+  padding: 30rpx 20rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #ddd;
+}
+.hot .word {
+  flex: 1;
+  color: #fff;
+  background-color: red;
+  font-size: 26rpx;
+  border-radius: 10rpx;
+  width: 40rpx;
+  height: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hot .remen {
+  flex: 8;
+  padding-left: 10rpx;
+  font-size: 36rpx;
+}
+.hot .jiantou {
+  flex: 1;
+}
+.list {
+  margin-top: 20rpx;
+  padding: 0 30rpx;
+}
+.list .item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  background-color: #fff;
+}
+.list .item .img {
+  flex: 5;
+  height: 300rpx;
+}
+.list .item .img image {
+  width: 100%;
+  height: 100%;
+}
+.list .item .titel {
+  flex: 1;
+  padding: 10rpx;
+  font-size: 40rpx;
+  font-weight: 700;
+}
+.list .item .detail {
+  flex: 1;
+  display: flex;
+  padding: 10rpx;
+}
+.list .item .detail .avtar {
+  width: 60rpx;
+  height: 60rpx;
+  flex: 1;
+}
+.list .item .detail .avtar image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+.list .item .detail text {
+  flex: 7;
+  font-size: 36rpx;
+}
+.list .item .detail .chakan {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34rpx;
+}
+.list .item .detail .chakan image {
+  width: 40%;
+  margin-right: 10rpx;
+}

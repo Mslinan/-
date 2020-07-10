@@ -1,0 +1,14 @@
+<Search></Search>
+
+
+<!-- 菜谱分类 -->
+<view class="cate">
+  <navigator url="../detail/detail" class="item">学生菜谱</navigator>
+  <navigator class="item">学生菜谱</navigator>
+  <navigator class="item">学生菜谱</navigator>
+  <navigator class="item">学生菜谱</navigator>
+  <navigator class="item">学生菜谱</navigator>
+  <navigator class="item">学生菜谱</navigator>
+  <navigator class="item">学生菜谱</navigator>
+  <navigator class="item">学生菜谱</navigator>
+</view>
