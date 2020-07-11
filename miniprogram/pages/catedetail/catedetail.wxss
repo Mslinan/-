@@ -65,3 +65,11 @@ page {
 .detail_list .item .right .info .see image {
   width: 40%;
 }
+.empty {
+  font-size: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100rpx;
+  color: #adadad;
+}

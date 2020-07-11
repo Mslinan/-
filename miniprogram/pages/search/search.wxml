@@ -2,8 +2,8 @@
   <view class="bg"></view>
   <view class="input_wapper">
     <icon type="search"></icon>
-    <input type="text" placeholder="搜索菜谱"/>
-    <button>搜索</button>
+    <input type="text" placeholder="搜索菜谱" bindinput="handelChange"/>
+    <button bindtap="handelSearch">搜索</button>
   </view>
 </view>
 
@@ -12,30 +12,16 @@
   <view class="hot">
     <view class="title">热门搜索</view>
     <view class="items">
-      <view class="item">萝卜青菜</view>
-      <view class="item">萝卜青菜</view>
-      <view class="item">萝卜青菜</view>
-      <view class="item">萝卜青菜</view>
-      <view class="item">萝卜青菜</view>
-      <view class="item">萝卜青菜</view>
-      <view class="item">萝卜青菜</view>
-      <view class="item">萝卜青菜</view>
-      <view class="item">萝卜青菜</view>
+      <view class="item" wx:for="{{hotList}}" wx:key="_id"
+      data-id="{{item._id}}" data-title="{{item.recipeName}}" bindtap="toDeatil">{{item.recipeName}}</view>
     </view>
   </view>
   <!-- 近期搜索 -->
   <view class="recent">
     <view class="title">近期搜索</view>
-    <view class="items">
-      <view class="item">萝卜青菜</view>
-      <view class="item">萝卜青菜</view>
-      <view class="item">萝卜青菜</view>
-      <view class="item">萝卜青菜</view>
-      <view class="item">萝卜青菜</view>
-      <view class="item">萝卜青菜</view>
-      <view class="item">萝卜青菜</view>
-      <view class="item">萝卜青菜</view>
-      <view class="item">萝卜青菜</view>
+    <view class="wu" wx:if="{{recentList.length === 0}}">暂无搜索</view>
+    <view class="items" wx:else>
+      <view class="item" wx:for="{{recentList}}" wx:key="index">{{item}}</view>
     </view>
   </view>
 </view>

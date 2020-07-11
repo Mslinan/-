@@ -49,6 +49,11 @@ page {
   font-size: 40rpx;
   padding: 20rpx 0;
 }
+.tabs .hot .wu,
+.tabs .recent .wu {
+  color: #aaaaaa;
+  padding: 20rpx;
+}
 .tabs .hot .items,
 .tabs .recent .items {
   color: #ccc;

@@ -47,30 +47,41 @@
 					"id": -1,
 					"name": "搜索",
 					"pathName": "pages/search/search",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "全部菜谱",
 					"pathName": "pages/cate/cate",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": 3,
 					"name": "分类详情",
 					"pathName": "pages/detail/detail",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "菜详情",
 					"pathName": "pages/detail/detail",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "我的",
 					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "分类",
+					"pathName": "pages/catedetail/catedetail",
 					"scene": null
 				}
 			]

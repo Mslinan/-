@@ -1,20 +1,35 @@
 // miniprogram/pages/detail/detail.js
+const {find} = require('../../request/index')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    id: '',
+    detail: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // console.log(options)
+    const {id} = options
+    this.setData({
+      id
+    })
+    this.getDetail()
   },
-
+  // 查对应id的数据
+  async getDetail () {
+    const id = this.data.id
+    const res = await find('recpies',{_id: id})
+    // console.log(res)
+    this.setData({
+      detail: res.data[0]
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

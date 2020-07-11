@@ -1,27 +1,18 @@
 <!-- 轮播图 -->
 <swiper autoplay indicator-dots circular>
-  <swiper-item>
-    <image src="../../images/u=1018851034,3693454201&fm=11&gp=0.jpg" mode="widthFix"/> 
-  </swiper-item>
-  <swiper-item>
-    <image src="../../images/u=1018851034,3693454201&fm=11&gp=0.jpg" mode="widthFix"/> 
-  </swiper-item>
-  <swiper-item>
-    <image src="../../images/u=1018851034,3693454201&fm=11&gp=0.jpg" mode="widthFix"/> 
-  </swiper-item>
-  <swiper-item>
-    <image src="../../images/u=1018851034,3693454201&fm=11&gp=0.jpg" mode="widthFix"/> 
+  <swiper-item wx:for="{{detail.recipesPic}}" wx:key="index">
+    <image src="{{item}}" mode="widthFix"/> 
   </swiper-item>
 </swiper>
 
 <!-- 浏览信息 -->
 <view class="info_wapper">
   <view class="www">
-    <view class="title">青椒炒肉</view>
+    <view class="title">{{detail.recipeName}}</view>
     <view class="info">
-      <text>by anana</text>
-      <text>3 收藏</text>
-      <text>5 浏览</text>
+      <text>by {{detail.nickName}}</text>
+      <text>{{detail.tjcp}} 收藏</text>
+      <text>{{detail.rmcp}} 浏览</text>
     </view>
   </view>
 </view>
@@ -31,12 +22,7 @@
 <view class="way">
   <view class="title">方法步骤</view>
   <view class="main">
-    <view class="stap">1.买青椒</view>
-    <view class="stap">2.买肉</view>
-    <view class="stap">1.买青椒</view>
-    <view class="stap">2.买肉</view>
-    <view class="stap">1.买青椒</view>
-    <view class="stap">2.买肉</view>
+    <view class="stap">{{detail.recipesMake}}</view>
   </view>
 </view>
 

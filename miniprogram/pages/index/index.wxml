@@ -5,22 +5,22 @@
     <image src="../../icons/quanbu-.png" mode="widthFix"/>
     全部菜谱
   </navigator>
-  <view class="item">
+  <view class="item" bindtap="tocp" data-id="{{getlist[1]._id}}" data-title="{{getlist[1].recipeTypeName}}">
     <image src="../../icons/ertongyaoma.png" mode="widthFix"/>
     儿童菜谱
   </view>
-  <view class="item">
+  <view class="item" bindtap="tocp" data-id="{{getlist[0]._id}}" data-title="{{getlist[0].recipeTypeName}}">
     <image src="../../icons/yangsheng.png" mode="widthFix"/>
     养生菜谱
   </view>
-  <view class="item">
+  <view class="item" bindtap="tocp" data-id="1" data-title="推荐菜谱">
     <image src="../../icons/tuijian.png" mode="widthFix"/>
    推荐菜谱
   </view>
 </view>
 
 <!-- 热门菜谱 -->
-<view class="hot">
+<view class="hot" bindtap="tocp" data-id="2" data-title="热门菜谱">
   <view class="word">HOT</view>
   <text class="remen">热门菜谱</text>
   <text class="jiant">></text>
@@ -28,51 +28,19 @@
 
 <!-- 菜列表 -->
 <view class="list">
-  <view class="item">
+  <view class="item" wx:for="{{hotList}}" wx:key="_id" data-id="{{item._id}}" bindtap="toDeatil">
     <view class="img">
-      <image src="../../images/u=1018851034,3693454201&fm=11&gp=0.jpg" mode="aspectFill"></image>
+      <image src="{{item.recipesPic[0]}}" mode="aspectFill"></image>
     </view>
-    <view class="titel">萝卜青菜</view>
+    <view class="titel">{{item.recipeName}}</view>
     <view class="detail">
       <view class="avtar">
-        <image src="../../images/u=1018851034,3693454201&fm=11&gp=0.jpg" mode="aspectFill"></image>
+        <image src="{{item.avatarUrl}}" mode="aspectFill"></image>
       </view>
-      <text>anana</text>
+      <text>{{item.nickName}}</text>
       <view class="chakan">
         <image src="../../icons/chakan.png" mode="widthFix"></image>
-        20
-      </view>
-    </view>
-  </view>
-  <view class="item">
-    <view class="img">
-      <image src="../../images/u=1018851034,3693454201&fm=11&gp=0.jpg" mode="aspectFill"></image>
-    </view>
-    <view class="titel">萝卜青菜</view>
-    <view class="detail">
-      <view class="avtar">
-        <image src="../../images/u=1018851034,3693454201&fm=11&gp=0.jpg" mode="aspectFill"></image>
-      </view>
-      <text>anana</text>
-      <view class="chakan">
-        <image src="../../icons/chakan.png" mode="widthFix"></image>
-        20
-      </view>
-    </view>
-  </view>
-  <view class="item">
-    <view class="img">
-      <image src="../../images/u=1018851034,3693454201&fm=11&gp=0.jpg" mode="aspectFill"></image>
-    </view>
-    <view class="titel">萝卜青菜</view>
-    <view class="detail">
-      <view class="avtar">
-        <image src="../../images/u=1018851034,3693454201&fm=11&gp=0.jpg" mode="aspectFill"></image>
-      </view>
-      <text>anana</text>
-      <view class="chakan">
-        <image src="../../icons/chakan.png" mode="widthFix"></image>
-        20
+        {{item.rmcp}}
       </view>
     </view>
   </view>

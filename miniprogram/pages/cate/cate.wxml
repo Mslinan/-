@@ -3,12 +3,8 @@
 
 <!-- 菜谱分类 -->
 <view class="cate">
-  <navigator url="../detail/detail" class="item">学生菜谱</navigator>
-  <navigator class="item">学生菜谱</navigator>
-  <navigator class="item">学生菜谱</navigator>
-  <navigator class="item">学生菜谱</navigator>
-  <navigator class="item">学生菜谱</navigator>
-  <navigator class="item">学生菜谱</navigator>
-  <navigator class="item">学生菜谱</navigator>
-  <navigator class="item">学生菜谱</navigator>
+  <view class="item" wx:for="{{cateList}}" wx:key="_id" bindtap="gocateDetail"
+  data-id="{{item._id}}" data-title="{{item.recipeTypeName}}">
+    {{item.recipeTypeName}}
+  </view>
 </view>
