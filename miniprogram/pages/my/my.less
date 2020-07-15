@@ -12,8 +12,22 @@
     left: 50%;
     top: 30rpx;
     transform: translateX(-50%);
-    image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .nologin {
       width: 100%;
+    }
+    .avtar {
+      width: 200rpx;
+      height: 200rpx;
+      border-radius: 50%;
+      margin-top: 30rpx;
+    }
+    .nickname {
+      font-size: 40rpx;
+      margin-top: 20rpx;
     }
     button {
       width: 200rpx;
@@ -36,6 +50,157 @@
     &.active {
       border-bottom: 1rpx solid #fe6f36;
       color: #fe6f36;
+    }
+  }
+}
+
+swiper {
+  swiper-item {
+    &:nth-child(1) {
+      background-color: #eee;
+      .btn {
+        font-size: 40rpx;
+        font-weight: 700;
+        margin: 10rpx 30rpx;
+        color: #fe6f36;
+        padding: 10rpx 40rpx;
+        border-radius: 50rpx;
+        border: 3rpx dashed #fe6f36;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .list {
+        margin-top: 20rpx;
+        padding: 0 30rpx;
+        .item {
+          display: flex;
+          flex-direction: column;
+          border-radius: 20rpx;
+          overflow: hidden;
+          background-color: #fff;
+          margin-bottom: 10rpx;
+          position: relative;
+          .img {
+            flex: 5;
+            height: 300rpx;
+            image {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .titel {
+            flex: 2;
+            display: flex;
+            justify-content: space-between;
+            text {
+              padding: 10rpx;
+              font-size: 40rpx;
+              font-weight: 700;
+            }
+            .detail {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               font-size: 34rpx;
+               padding-right: 10rpx;
+              image {
+                width: 60rpx;
+                margin-right: 10rpx;
+              }
+            }
+          }
+          icon {
+            position: absolute;
+            top: 0rpx;
+            right:0rpx;
+          }
+        }
+      }
+    }
+    &:nth-child(2) {
+      .list {
+        padding: 10rpx 20rpx;
+        .cate {
+          &:nth-child(1) {
+            margin-top: 20rpx;
+          }
+          background-color: #eee;
+          padding: 20rpx 10rpx;
+          margin-bottom: 20rpx;
+          font-size: 40rpx;
+          border-radius: 50rpx;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #595959;
+        }
+      }
+    }
+    .detail_list {
+      margin-top: 20rpx;
+      padding: 0 20rpx; 
+      background-color: #eee;
+      .item {
+        background-color: #fff;
+        display: flex;
+        border-radius: 20rpx;
+        overflow: hidden;
+        height: 350rpx;
+        margin-bottom: 20rpx;
+        .left {
+          flex: 1;
+          padding-right: 10rpx;
+          image {
+            width: 100%;
+          }
+        }
+        .right {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 10rpx 0;
+          .title {
+            font-size: 40rpx;
+            font-weight: 700;
+          }
+          .info {
+            display: flex;
+            color: rgb(184, 184, 184);
+            .avatar {
+              flex: 2;
+              width: 60rpx;
+              height: 60rpx;
+              display: flex;
+              image {
+                width: 60rpx;
+                height: 60rpx;
+                border-radius: 50%;
+                margin-right: 10rpx;
+              }
+            }
+            .collect {
+              flex: 1;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              image {
+                width: 40%;
+              }
+            }
+            .see {
+              flex: 1;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              image {
+                width: 40%;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

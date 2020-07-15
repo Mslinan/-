@@ -1,0 +1,28 @@
+<form bindsubmit="submit">
+  <view class="title">菜单名称</view>
+  <view class="input">
+    <input type="text" value="{{value}}" name="recipeName" placeholder="请输入菜单名称"/>
+  </view>
+
+  <view class="title">菜谱分类</view>
+  <radio-group bindchange=""name="recipeTypeid">
+    <radio value="{{item._id}}" wx:for="{{recipeType}}" wx:key="_id" >
+      {{item.recipeTypeName}}
+      </radio>
+  </radio-group>
+
+  <view class="title">上传图片 | {{imgArr.length}}/9</view>  
+  <view class="content">
+    <view class="img" wx:for="{{imgArr}}" wx:key="index">
+      <image src="{{item}}"/>
+    </view>
+    <view class="img add" bindtap="uploadImg" wx:if="{{imgArr.length < 9}}">
+      <image src="../../images/add.png" mode="widthFix"/>
+    </view>
+  </view>
+
+  <view class="title">做法步骤</view>
+  <textarea placeholder="请输入详细做法..." name="recipesMake"></textarea>
+    
+  <button type="primary" form-type="submit">提交</button>
+</form>

@@ -1,0 +1,54 @@
+.title {
+  background-color: #ddd;
+  font-size: 36rpx;
+  color: #595959;
+  padding: 20rpx 10rpx;
+  border-bottom: 1rpx solid #aaa8a8;
+}
+.input {
+  padding: 20rpx 10rpx;
+  border-bottom: 1rpx solid #aaa8a8;
+}
+radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1rpx solid #aaa8a8;
+}
+radio-group radio {
+  width: 33.33%;
+  padding: 10rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34rpx;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1rpx solid #aaa8a8;
+}
+.content .img {
+  width: 32%;
+  height: 208rpx;
+  overflow: hidden;
+  margin: 5rpx;
+  border-radius: 20rpx;
+}
+.content .img.add {
+  border: 2rpx solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .img.add image {
+  width: 80%;
+}
+textarea {
+  padding: 20rpx 10rpx;
+  border-bottom: 1rpx solid #595959;
+  width: 100%;
+}
+button {
+  width: 80%;
+  margin: 20rpx auto;
+}

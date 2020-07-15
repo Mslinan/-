@@ -1,12 +1,17 @@
+
 <view class="avtar">
   <view class="bg">
     <image src="../../images/background.jpg" mode="aspectFill"/>
   </view>
-  <view class="user">
-    <image src="../../images/user.png" mode="widthFix"/>
-    <button open-type="getUserInfo" type="primary">
+  <view class="user" wx:if="{{!userInfo.nickName}}">
+    <image class="nologin" src="../../images/user.png" mode="widthFix"/>
+    <button open-type="getUserInfo" type="primary" bindgetuserinfo="handelgetUserInfo">
       登录
     </button>
+  </view>
+  <view class="user" wx:else>
+    <image class="avtar" src="{{userInfo.avatarUrl}}" mode="widthFix"/>
+    <view class="nickname">{{userInfo.nickName}}</view>
   </view>
 </view>
 
@@ -18,17 +23,73 @@
   <view class="item {{current === 2 ? 'active' : ''}}" bindtap="chectoutTab" data-index="2">关注</view>
 </view>
 
-<swiper current-item-id="{{current}}" bindchange="handelChange">
-  <swiper-item item-id="0">111</swiper-item>
-  <swiper-item item-id="1">222</swiper-item>
-  <swiper-item item-id="2">333</swiper-item>
+
+<swiper current-item-id="{{current}}" bindchange="handelChange" 
+ style="min-height: {{calcHeight}}" wx:if="{{userInfo.nickName}}">
+  <swiper-item item-id="0">
+    <navigator url="../addcaidan/addcaidan" class="btn">+ 添加菜单</navigator>
+    <view class="list">
+      <view class="item" data-id="{{item._id}}" bindtap="toDeatil" wx:for="{{caidanList}}"
+      wx:key="_id">
+        <view class="img">
+          <image src="{{item.recipesPic[0]}}" mode="aspectFill"></image>
+        </view>
+        <view class="titel">
+          <text>{{item.recipeName}}</text>
+          <view class="detail">
+            <image src="../../icons/chakan.png" mode="widthFix"></image>
+            {{item.rmcp}}
+          </view>
+        </view>
+        <!-- 删除 -->
+        <icon type="clear" size="23" catchtap="remove" data-id="{{item._id}}"></icon>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item item-id="1">
+    <view class="list">
+      <view class="cate" wx:for="{{caipuList}}" wx:key="_id" data-title="{{item.recipeTypeName}}"
+       bindtap="gocateDetail" data-id="{{item._id}}" data-my="my">{{item.recipeTypeName}}
+      </view>
+    </view>
+  </swiper-item>
+  <!-- 关注 -->
+  <swiper-item item-id="2">
+    <view class="detail_list">
+      <view class="item" wx:for="{{attentionList}}" wx:key="_id" data-id="{{item._id}}" bindtap="toDeatil">
+        <view class="left">
+          <image src="{{item.recipesPic[0]}}" mode="aspectFill"></image>
+        </view>
+        <view class="right">
+          <view class="title">{{item.recipeName}}</view>
+          <view class="info">
+            <view class="avatar">
+              <image src="{{item.avatarUrl}}" mode="aspectFill"/>
+              {{item.nickName}}
+            </view>
+            <view class="collect">
+              <image src="../../icons/shoucang.png" mode="widthFix"/>
+              {{item.rmcp}}
+            </view>
+            <view class="see">
+              <image src="../../icons/chakan.png" mode="widthFix"/>
+              {{item.tjcp}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </swiper-item>
 </swiper>
+
   
 
-<!-- <view class="content">
+  
+
+<view class="content" wx:if="{{!userInfo.nickName}}">
   <image src="../../images/meiyouxiangguan.png" />
   <view class="text">
     请先登录哦~
   </view>
-</view> -->
+</view>
 

@@ -14,11 +14,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    this.getlist()
+    this.getHotList()
   },
   onLoad () {
-    this.getHotList()
-    this.getlist()
+   
   },
   // 跳转详情页
   toDeatil (e) {
@@ -31,7 +31,7 @@ Page({
   },
   // 请求首页菜谱
   async getHotList () {
-    const res = await find('recpies')
+    const res = await find('recpies',{},5)
     // console.log(res.data)
     this.setData({
       hotList: res.data
